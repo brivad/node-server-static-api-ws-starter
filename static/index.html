@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script language="JavaScript">
+      function websocketConnect() {
+        const ws = new WebSocket(
+          (window.location.protocol == 'https:' ? 'wss://' : 'ws://') +
+            window.location.host
+        )
+
+        ws.onopen = function() {
+          ws.send('test hello!')
+        }
+
+        ws.onmessage = function(message) {
+          console.log('message received: ' + message.data)
+          document.getElementById('messageFromServer').innerHTML = message.data
+        }
+      }
+    </script>
+  </head>
+
+  <p>REST endpoints:</p>
+  <ul>
+    <li><a href="status">GET /status</a></li>
+  </ul>
+
+  <button onclick="websocketConnect()">Connect to server via websocket</button>
+
+  <div id="messageFromServer"></div>
+</html>
