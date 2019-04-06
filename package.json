@@ -1,11 +1,11 @@
 {
-  "name": "node-server-static-api-ws",
+  "name": "node-server-static-api-ws-starter",
   "version": "1.0.0",
   "author": {
     "name": "brivad",
     "email": "brivad@gmail.com"
   },
-  "description": "Node server for static files, api and web socket",
+  "description": "Node server for static files, api and websockets",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
