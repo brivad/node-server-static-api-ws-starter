@@ -23,7 +23,7 @@ const server = app.listen(port, () => {
 //    "Access-Control-Allow-Methods": "PUT, GET, POST, DELETE, OPTIONS"
 //} }
 
-const wss = new WebSocket({ server }) // uses server's host and port also for ws
+const wss = new WebSocket.Server({ server }) // uses server's host and port also for ws
 // const wss = new WebSocket.Server({ host: '0.0.0.0', port: 8080 }) // custom
 
 //init Websocket ws and handle incoming connect requests
